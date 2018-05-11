@@ -1,0 +1,73 @@
+body, html {
+    font-family: 'Nunito', sans-serif;
+    background-color: #fff;
+    color: #290e54;
+    text-align: left;
+    height: 100%;
+    background: url(../images/background.svg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    margin: 0 auto;
+}
+
+.logo-hero {
+    width: 350px;
+    margin: 0;
+}
+
+.one {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.flexitem {
+    flex-direction: row;
+    margin: 70px 100px 70px 100px;
+    align-self: center; /* aligns each item to centre of each other */
+}
+
+#info {
+    max-width: 70vw;
+}
+
+.flexitem p {
+    max-width: 45vw;  
+}
+
+p {
+    font-size: 18px;
+}
+
+.splash-phone {
+    height: 600px;
+}
+
+.appstore-download {
+    width: 180px;
+    margin-top: 30px;
+}
+
+/*nav {
+    
+}
+
+.one {
+    
+}
+
+#logo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+    min-height: 100%;
+    z-index: -99999;
+} 
+
+*/
+
+
