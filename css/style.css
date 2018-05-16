@@ -18,7 +18,7 @@ body, html {
 }
 
 .one {
-    width: 90vw;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -26,13 +26,14 @@ body, html {
 
 .flexitem {
     flex-direction: row;
-    margin: 70px 100px 70px 100px;
+    margin: 20px 100px 70px 100px;
     align-self: center; /* aligns each item to centre of each other */
 }
 
 #info {
     max-width: 70vw;
 }
+
 
 .flexitem p {
     max-width: 45vw;  
@@ -43,6 +44,7 @@ p {
 }
 
 .splash-phone {
+    max-height: 600px;
     height: 600px;
 }
 
@@ -51,23 +53,151 @@ p {
     margin-top: 30px;
 }
 
-/*nav {
-    
+
+
+
+
+/* ---------- NAVIGATION ---------- */
+
+nav {
+    float: right;
+    font-weight: 600;
 }
 
-.one {
-    
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-#logo {
-    position: fixed;
+nav ul li {
+    float: left;
+    position: relative;
+}
+
+nav ul li a,
+nav ul li a:visited {
+    display: block;
+    padding: 0 25px;
+    line-height: 70px;
+    color: #290e54;
+    text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a:visited:hover {
+    color: #ffffff;
+    transition: ease 0.3s;
+}
+
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+    padding-left: 4px;
+    content: ' ▾';
+}
+
+nav ul li ul li {
+    min-width: 190px;
+}
+
+nav ul li ul li a {
+    padding: 15px;
+    line-height: 20px;
+}
+
+/* Mobile navigation */
+.nav-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
     right: 0;
-    bottom: 0;
+    height: 70px;
+    width: 70px;
+}
 
-    min-height: 100%;
-    z-index: -99999;
-} 
+@media only screen and (max-width: 798px) {
+  .nav-mobile {
+    display: block;
+  }
 
-*/
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  
+  nav ul {
+    display: none;
+  }
+    
+  nav ul li {
+    float: none;
+  }
+    
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+    background: #efd154;
+  }
+    
+    
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
 
+  .nav-dropdown {
+    position: static;
+  }
+}
+
+@media screen and (min-width: 799px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+
+#nav-toggle {
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 10px;
+    height: 5px;
+    width: 35px;
+    background: #ffffff;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+}
+
+#nav-toggle span:before {
+    top: -10px;
+}
+
+#nav-toggle span:after {
+    bottom: -10px;
+}
+
+#nav-toggle.active span {
+    background-color: transparent;
+}
+
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+    top: 0;
+}
+
+#nav-toggle.active span:before {
+    transform: rotate(45deg);
+}
+
+#nav-toggle.active span:after {
+    transform: rotate(-45deg);
+}
 
