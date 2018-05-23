@@ -14,11 +14,6 @@ body, html {
     margin: 0;
 }
 
-.smalllogo {
-    width: 120px;
-    float: left;
-    padding: 15px 25px;
-}
 
 .headerbg {
     /*max-width: 100%;
@@ -324,15 +319,18 @@ nav ul li a {
 
 @media screen and (min-width : 768px) and (max-width : 1024px)  { 
     
+    /* media queries don't seem to be working - I can't see why */
+    
     #signariphone {
-        visibility: hidden;
-        display: none;
-        clear: both;
+        display: block;
     }
     
-    .one {
-        background-color: 000;
+    nav ul li{
+        float: none;
     }
     
+    .flexitem2 {
+        display: block;
+        flex-direction: column;
     }
 
